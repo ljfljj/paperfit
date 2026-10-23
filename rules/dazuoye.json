@@ -1,0 +1,77 @@
+{
+  "name": "高校课程大作业通用模板",
+  "page": {
+    "width_cm": 21.0,
+    "height_cm": 29.7,
+    "margin_cm": 2.0
+  },
+  "roles": {
+    "title": {
+      "label": "题目",
+      "cn_font": "黑体",
+      "size_pt": 16.0,
+      "bold": true,
+      "align": "center"
+    },
+    "author": {
+      "label": "作者姓名",
+      "cn_font": "黑体",
+      "size_pt": 10.5,
+      "bold": true,
+      "align": "center"
+    },
+    "org": {
+      "label": "单位名称",
+      "cn_font": "仿宋_GB2312",
+      "size_pt": 10.5,
+      "bold": false,
+      "align": "center"
+    },
+    "abstract": {
+      "label": "中文摘要",
+      "cn_font": "宋体",
+      "size_pt": 10.5,
+      "bold": false,
+      "align": "justify",
+      "indent_chars": 2
+    },
+    "keywords": {
+      "label": "关键词",
+      "cn_font": "宋体",
+      "size_pt": 10.5,
+      "bold": false,
+      "align": "justify"
+    },
+    "h1": {
+      "label": "一级标题",
+      "cn_font": "仿宋_GB2312",
+      "size_pt": 14.0,
+      "bold": false
+    },
+    "h2": {
+      "label": "二级标题",
+      "cn_font": "黑体",
+      "size_pt": 10.5,
+      "bold": true
+    },
+    "body": {
+      "label": "正文",
+      "cn_font": "宋体",
+      "size_pt": 10.5,
+      "bold": false,
+      "align": "justify",
+      "indent_chars": 2
+    },
+    "ref": {
+      "label": "参考文献",
+      "cn_font": "宋体",
+      "size_pt": 10.5,
+      "bold": false
+    }
+  },
+  "reference": {
+    "min_count": 10,
+    "recent_years": 5,
+    "recent_ratio": 0.5
+  }
+}

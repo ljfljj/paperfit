@@ -1,0 +1,118 @@
+{
+  "file": "thesis-bad.docx",
+  "rules": "高校课程大作业通用模板",
+  "score": 32,
+  "passed": [
+    "页面尺寸",
+    "题目",
+    "作者姓名",
+    "单位名称",
+    "二级标题",
+    "参考文献数量"
+  ],
+  "issues": [
+    {
+      "role": "中文摘要",
+      "expect": "10.5pt",
+      "actual": "11.0pt",
+      "where": "第4段: 摘要：针对机械加工过程中工艺参数依赖经验、质量波",
+      "level": "error"
+    },
+    {
+      "role": "关键词",
+      "expect": "10.5pt",
+      "actual": "11.0pt",
+      "where": "第5段: 关键词：智能制造；工艺优化；数据驱动；机械加工",
+      "level": "error"
+    },
+    {
+      "role": "一级标题",
+      "expect": "中文仿宋_GB2312、14.0pt",
+      "actual": "中文宋体、12.0pt",
+      "where": "第6段: 1  引言",
+      "level": "error"
+    },
+    {
+      "role": "一级标题",
+      "expect": "中文仿宋_GB2312、14.0pt",
+      "actual": "中文宋体、12.0pt",
+      "where": "第10段: 2  方法设计",
+      "level": "error"
+    },
+    {
+      "role": "一级标题",
+      "expect": "中文仿宋_GB2312、14.0pt",
+      "actual": "中文宋体、12.0pt",
+      "where": "第12段: 3  结论",
+      "level": "error"
+    },
+    {
+      "role": "正文",
+      "expect": "10.5pt、首行缩进2字符",
+      "actual": "12.0pt、无缩进",
+      "where": "第7段: 机械加工是装备制造的基础环节，其工艺水平直接决定",
+      "level": "error"
+    },
+    {
+      "role": "正文",
+      "expect": "10.5pt、首行缩进2字符",
+      "actual": "12.0pt、无缩进",
+      "where": "第9段: 已有研究主要从两个方向展开：一是基于机理模型建立",
+      "level": "error"
+    },
+    {
+      "role": "正文",
+      "expect": "10.5pt、首行缩进2字符",
+      "actual": "12.0pt、无缩进",
+      "where": "第11段: 本文采用正交试验获取样本数据，以主轴转速、进给量",
+      "level": "error"
+    },
+    {
+      "role": "正文",
+      "expect": "（同上）",
+      "actual": "共 4 处不符",
+      "where": "多处",
+      "level": "error"
+    },
+    {
+      "role": "参考文献",
+      "expect": "10.5pt",
+      "actual": "11.0pt",
+      "where": "第15段: [1] 王强, 李华. 切削参数对表面粗糙度影响",
+      "level": "error"
+    },
+    {
+      "role": "参考文献",
+      "expect": "10.5pt",
+      "actual": "11.0pt",
+      "where": "第16段: [2] 张伟, 刘洋, 陈明, 等. 基于机器学",
+      "level": "error"
+    },
+    {
+      "role": "参考文献",
+      "expect": "10.5pt",
+      "actual": "11.0pt",
+      "where": "第17段: [3] 赵磊. 数控加工工艺参数智能优化方法研究",
+      "level": "error"
+    },
+    {
+      "role": "参考文献",
+      "expect": "（同上）",
+      "actual": "共 10 处不符",
+      "where": "多处",
+      "level": "error"
+    }
+  ],
+  "stats": {
+    "title": 1,
+    "author": 1,
+    "org": 1,
+    "abstract": 1,
+    "keywords": 1,
+    "h1": 3,
+    "h2": 1,
+    "body": 4,
+    "ref": 10
+  },
+  "paragraphs": 24
+}

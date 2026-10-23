@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PaperFit · 论文格式体检官</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(160deg,#eef2ff,#f8fafc 40%,#ecfeff);
+     font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;color:#1f2329;
+     display:flex;align-items:center;justify-content:center;padding:24px}
+.box{width:100%;max-width:620px;background:#fff;border-radius:22px;padding:36px;
+     box-shadow:0 18px 50px rgba(31,41,55,.10)}
+.logo{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#4f7cff,#22d3ee);
+      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;margin-bottom:18px}
+h1{font-size:26px;margin:0 0 6px}
+.sub{color:#8a9099;font-size:14px;margin:0 0 26px;line-height:1.6}
+.drop{border:2px dashed #c7d2fe;border-radius:16px;padding:38px 20px;text-align:center;
+      background:#f8faff;cursor:pointer;transition:.2s}
+.drop:hover,.drop.hover{border-color:#4f7cff;background:#eef2ff}
+.drop b{color:#4f7cff}
+.hint{color:#98a2b3;font-size:12px;margin-top:10px}
+.btn{display:block;width:100%;margin-top:22px;padding:14px;border:0;border-radius:12px;
+     background:linear-gradient(135deg,#4f7cff,#22d3ee);color:#fff;font-size:16px;font-weight:600;cursor:pointer}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.feat{display:flex;gap:16px;margin-top:26px;font-size:12px;color:#8a9099}
+.feat div{flex:1;background:#f8fafc;border-radius:10px;padding:10px 12px}
+</style></head><body>
+<form class="box" action="/check" method="post" enctype="multipart/form-data" id="f">
+  <div class="logo">PF</div>
+  <h1>PaperFit · 论文格式体检官</h1>
+  <p class="sub">上传 Word 论文，自动对照模板逐条体检：字体、字号、对齐、首行缩进、参考文献格式。<br>输出评分、问题定位与整改清单。</p>
+  <label class="drop" id="drop">
+    <input type="file" name="file" accept=".docx" id="file" hidden>
+    <div>把 <b>.docx</b> 拖到这里，或<b>点击选择文件</b></div>
+    <div class="hint" id="fname">支持 .docx（Word 2007+），单个文件即可</div>
+  </label>
+  <button class="btn" type="submit" id="go" disabled>开始体检</button>
+  <div class="feat">
+    <div>规则可配置<br>换模板只改 JSON</div>
+    <div>结果可复现<br>规则引擎驱动</div>
+    <div>问题可定位<br>精确到第几段</div>
+  </div>
+</form>
+<script>
+const drop=document.getElementById('drop'),file=document.getElementById('file'),
+      fname=document.getElementById('fname'),go=document.getElementById('go');
+drop.addEventListener('click',()=>file.click());
+drop.addEventListener('dragover',e=>{e.preventDefault();drop.classList.add('hover')});
+drop.addEventListener('dragleave',()=>drop.classList.remove('hover'));
+drop.addEventListener('drop',e=>{e.preventDefault();drop.classList.remove('hover');
+  if(e.dataTransfer.files.length){file.files=e.dataTransfer.files;update()}});
+file.addEventListener('change',update);
+function update(){ if(file.files.length){fname.textContent='已选择：'+file.files[0].name;go.disabled=false} }
+</script></body></html>
